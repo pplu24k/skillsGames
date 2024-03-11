@@ -1,0 +1,31 @@
+<div class="games-page">
+    <app-header></app-header>
+
+<div class="container">
+    <section class="private-access">
+        <h3 class="text-center m-4">Private access</h3>
+        <app-login></app-login>
+    </section>
+
+    <div class="games-subtitle">
+        <h2>Games section</h2>
+    </div>
+    <div class="game-lists-box">
+        <app-game-search></app-game-search>
+        <app-game-list filter="Last played"></app-game-list>
+        <app-game-list filter="News"></app-game-list>
+        <app-game-list filter="Random"></app-game-list>
+        <app-game-list theme="Arcade"></app-game-list>
+        <app-game-list theme="Puzzle"></app-game-list>
+        <app-game-list theme="Aventuras"></app-game-list>
+        <app-game-list theme="Acción"></app-game-list>
+        <app-game-list theme="Tablero"></app-game-list>
+        <app-game-list theme="Estrategia"></app-game-list>
+        <app-game-list theme="Multijugador"></app-game-list>
+    </div>
+</div>
+
+    <div class="footer-box">
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="game-list-comp">
+
+    <h4 class="text-center bg-info">
+        {{theme}} {{filter}}
+    </h4>
+
+
+    <div class="games-list">
+
+        <ng-container *ngIf="!filteredGames">
+            <app-game [data]="game" *ngFor="let game of (games | async)" ></app-game>
+        </ng-container>
+        <ng-container *ngIf="filteredGames">
+            <app-game [data]="game" *ngFor="let game of filteredGames" ></app-game>
+
+        </ng-container>
+       
+
+
+    </div>
+</div>

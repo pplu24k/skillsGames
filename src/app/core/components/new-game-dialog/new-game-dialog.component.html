@@ -1,0 +1,47 @@
+<button (click)="showModal()" class="btn btn-primary">
+    <span *ngIf="editableGame">Edit</span>
+    <span *ngIf="!editableGame">Create</span>
+</button>
+
+<dialog #gameFormDialog>
+
+    <form>
+        <div>
+            <label for="image">Image</label>
+            <input [(ngModel)]="gameFormData.image" type="file" class="form-control" name="image" id="image">
+        </div>
+        <div>
+            <label for="image">Title</label>
+            <input [(ngModel)]="gameFormData.title"  type="text" class="form-control" name="title" id="title">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input [(ngModel)]="gameFormData.description"  type="text" class="form-control" name="description" id="description">
+        </div>
+        <div>
+            <label for="positives">Positives</label>
+            <input [(ngModel)]="gameFormData.positives"  type="number" class="form-control" name="positives" id="positives">
+        </div>
+        <div>
+            <label for="negatives">Negatives</label>
+            <input [(ngModel)]="gameFormData.negatives" type="number" class="form-control" name="negatives" id="negatives">
+        </div>
+        <div>
+            <label for="categories">Categories</label>
+            <input [(ngModel)]="gameFormData.themes" type="text" class="form-control" name="categories" id="categories">
+        </div>
+        <div class="m-2">
+            <button type="button" class="btn btn-danger m-2" (click)="closeModal()">
+                cancel
+            </button>
+            <button type="submit" class="btn btn-primary m-2">
+                <span *ngIf="editableGame">Edit</span>
+                <span *ngIf="!editableGame">Create</span>
+            </button>
+        </div>
+
+
+
+    </form>
+
+</dialog>

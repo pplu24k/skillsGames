@@ -1,0 +1,28 @@
+<div class="game-comp">
+    <img src="{{data.image}}" alt="">
+    <h5 class="text-center">{{data.title}}</h5>
+    <p>{{data.description}}</p>
+    <p>cateogry: {{data.themes[0].name}}</p>
+    <p class="votes"><span class="positive">+{{data.positives}}</span><span class="negative">-{{data.negatives}}</span></p>
+    <button class="btn btn-info m-1" (click)="showRanking()">Ranking</button>
+    <a [routerLink]="'/viewgame/' + data.id" class="btn btn-primary m-1">View</a>
+
+</div>
+
+<dialog #rankingDialog class="ranking-dialog">
+
+        <div class="dialog-contet">
+
+            <h5>Ranking of {{data.title}} </h5>
+
+            <ol>
+                <li *ngFor="let rank of ranking">{{rank.user}}: {{rank.score}}</li>
+            </ol>
+
+            <button class="btn btn-danger" (click)="showModal()">Close</button>
+
+        </div>
+
+    
+    
+</dialog>
